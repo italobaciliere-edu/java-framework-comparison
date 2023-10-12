@@ -1,0 +1,6 @@
+br\com\eletrotechstore\controller\GreetingResource.class
+br\com\eletrotechstore\model\Pagamento.class
+META-INF\panache-archive.marker
+br\com\eletrotechstore\repository\PagamentoRepository.class
+br\com\eletrotechstore\model\Status.class
+br\com\eletrotechstore\model\MyEntity.class
