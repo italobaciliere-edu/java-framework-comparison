@@ -1,4 +1,4 @@
-package br.com.eletrotechstore.controller;
+package br.com.eletrotechstore;
 
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;

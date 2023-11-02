@@ -1,4 +1,4 @@
-package br.com.eletrotechstore.model;
+package br.com.eletrotechstore.pagamentos.model;
 
 public enum Status {
   CRIADO,

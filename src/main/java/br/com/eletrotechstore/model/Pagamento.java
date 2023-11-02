@@ -1,11 +1,11 @@
-package br.com.eletrotechstore.model;
+package br.com.eletrotechstore.pagamentos.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Positive;
-import javax.validation.constraints.Size;
 import java.math.BigDecimal;
 
 @Entity
@@ -43,6 +43,3 @@ public class Pagamento {
 
   private Long formaDePagamentoId;
 }
-
-
-// todo - application properties
