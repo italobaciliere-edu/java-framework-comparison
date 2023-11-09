@@ -10,7 +10,8 @@ services:
     ports:
       - 3306:3306
     volumes:      
-      - ./docker-entrypoint-initdb.d/1.sql:/docker-entrypoint-initdb.d/1.sql
+      # - /docker-entrypoint-initdb.d/1.sql:/docker-entrypoint-initdb.d/1.sql
+      - "C:/Users/italo/Documents/Trabalho de Conclusão de Curso/main/docker-entrypoint-initdb.d/1.sql:/docker-entrypoint-initdb.d/1.sql"
       # https://iamvickyav.medium.com/mysql-init-script-on-docker-compose-e53677102e48
 
   adminer:
