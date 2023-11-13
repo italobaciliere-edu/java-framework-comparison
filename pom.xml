@@ -29,6 +29,13 @@
       <id>central</id>
       <url>https://repo.maven.apache.org/maven2</url>
     </repository>
+    <repository>
+      <id>micronaut-releases</id>
+      <url>https://mvnrepository.com/releases</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+    </repository>
   </repositories>
 
   <dependencies>
@@ -102,11 +109,55 @@
       <artifactId>junit-jupiter-engine</artifactId>
       <scope>test</scope>
     </dependency>
+
     <dependency>
       <groupId>org.modelmapper</groupId>
       <artifactId>modelmapper</artifactId>
       <version>3.1.0</version>
     </dependency>
+
+<!--    <dependency>-->
+<!--      <groupId>io.micronaut.discovery</groupId>-->
+<!--      <artifactId>micronaut-discovery-client</artifactId>-->
+<!--&lt;!&ndash;      <scope>implementation</scope>&ndash;&gt;-->
+<!--      <scope>compile</scope>-->
+<!--    </dependency>-->
+
+<!--    <dependency>-->
+<!--      <groupId>io.micronaut</groupId>-->
+<!--      <artifactId>discovery-eureka</artifactId>-->
+<!--      <version>4.0.0</version>-->
+<!--      <scope>compile</scope>-->
+<!--      <exclusions>-->
+<!--        <exclusion>-->
+<!--          <groupId>io.micronaut</groupId>-->
+<!--          <artifactId>discovery-client</artifactId>-->
+<!--        </exclusion>-->
+<!--      </exclusions>-->
+<!--    </dependency>-->
+
+<!--    <dependency>-->
+<!--      <groupId>io.reactivex.rxjava2</groupId>-->
+<!--      <artifactId>rxjava</artifactId>-->
+<!--      <version>2.2.21</version> &lt;!&ndash; Use a versão mais recente &ndash;&gt;-->
+<!--    </dependency>-->
+
+  <dependency>
+    <groupId>io.swagger.core.v3</groupId>
+    <artifactId>swagger-annotations</artifactId>
+    <version>2.1.10</version> <!-- Verifique a versão mais recente -->
+  </dependency>
+  <dependency>
+    <groupId>io.swagger.core.v3</groupId>
+    <artifactId>swagger-models</artifactId>
+    <version>2.1.10</version> <!-- Verifique a versão mais recente -->
+  </dependency>
+  <dependency>
+    <groupId>io.swagger.core.v3</groupId>
+    <artifactId>swagger-jaxrs2</artifactId>
+    <version>2.1.10</version> <!-- Verifique a versão mais recente -->
+  </dependency>
+
   </dependencies>
   <build>
     <plugins>
