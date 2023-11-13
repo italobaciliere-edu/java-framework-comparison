@@ -1,56 +1,35 @@
-# pagamentos
+# java-framework-comparison
+Course completion work in computer science - FUMEC
 
-This project uses Quarkus, the Supersonic Subatomic Java Framework.
+Para executar essa aplicação é necessário estar com o docker ligado.
 
-If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
+Para habilitar o agente de monitoramento (JMX) em uma aplicação Quarkus executada 
+a partir do IntelliJ IDEA, você pode configurar as opções de inicialização para o agente JMX na configuração 
+da execução da aplicação.
 
-## Running the application in dev mode
+1 - Configurações de Execução:
 
-You can run your application in dev mode that enables live coding using:
-```shell script
-./mvnw compile quarkus:dev
-```
+Certifique-se de que sua aplicação Quarkus está sendo executada em modo de desenvolvimento.
+Isso pode ser feito usando o comando ./mvnw quarkus:dev ou ./gradlew quarkusDev, dependendo de como o 
+projeto está configurado.
 
-> **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at http://localhost:8080/q/dev/.
+2 - Habilitar o Agente de Monitoramento:
 
-## Packaging and running the application
+Para permitir o monitoramento pelo VisualVM, você pode adicionar a opção de inicialização do JVM 
+-Dcom.sun.management.jmxremote ao iniciar o Quarkus. Na seção de opções de VM (VM Options), adicione 
+a opção para habilitar o agente de monitoramento JMX. Adicione algo semelhante a:
 
-The application can be packaged using:
-```shell script
-./mvnw package
-```
-It produces the `quarkus-run.jar` file in the `target/quarkus-app/` directory.
-Be aware that it’s not an _über-jar_ as the dependencies are copied into the `target/quarkus-app/lib/` directory.
+    -Dcom.sun.management.jmxremote 
 
-The application is now runnable using `java -jar target/quarkus-app/quarkus-run.jar`.
+[//]: # (https://pt.quarkus.io/guides/openapi-swaggerui)
+Para acessar o swagger da aplicação: 
 
-If you want to build an _über-jar_, execute the following command:
-```shell script
-./mvnw package -Dquarkus.package.type=uber-jar
-```
+    http://localhost:8085/swagger-ui/
 
-The application, packaged as an _über-jar_, is now runnable using `java -jar target/*-runner.jar`.
 
-## Creating a native executable
+[//]: # (https://www.youtube.com/watch?v=wWtleILrPnE&list=PLxYgR_cQignDqXT1ErgydPeHj4KQs4Dd5&index=2)
+[//]: # (% https://quarkus.io/get-started/)
 
-You can create a native executable using: 
-```shell script
-./mvnw package -Dnative
-```
 
-Or, if you don't have GraalVM installed, you can run the native executable build in a container using: 
-```shell script
-./mvnw package -Dnative -Dquarkus.native.container-build=true
-```
-
-You can then execute your native executable with: `./target/pagamentos-1.0.0-SNAPSHOT-runner`
-
-If you want to learn more about building native executables, please consult https://quarkus.io/guides/maven-tooling.
-
-## Provided Code
-
-### RESTEasy Reactive
-
-Easily start your Reactive RESTful Web Services
-
-[Related guide section...](https://quarkus.io/guides/getting-started-reactive#reactive-jax-rs-resources)
+[//]: # (https://github.com/fmcejudo/quarkus-eureka)
+[//]: # (Link da conexão com o eureka)

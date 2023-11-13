@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module version="4">
-  <component name="SonarLintModuleSettings">
-    <option name="uniqueId" value="c179ee0f-f058-4ef7-b6b4-f8c9d6b59303" />
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="Quarkus Tools">
+    <option name="hash" value="-1388587750" />
+    <option name="version" value="1" />
   </component>
 </module>

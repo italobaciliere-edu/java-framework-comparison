@@ -1,1 +1,9 @@
-br/com/eletrotechstore/GreetingResource.class
+br\com\eletrotechstore\configuration\QuarkusConfiguration.class
+br\com\eletrotechstore\dto\PagamentoDTO.class
+br\com\eletrotechstore\configuration\PersonMapper.class
+br\com\eletrotechstore\model\Pagamento.class
+META-INF\panache-archive.marker
+br\com\eletrotechstore\service\PagamentoService.class
+br\com\eletrotechstore\controller\PagamentoController.class
+br\com\eletrotechstore\repository\PagamentoRepository.class
+br\com\eletrotechstore\model\Status.class

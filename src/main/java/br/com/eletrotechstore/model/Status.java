@@ -1,6 +1,8 @@
-package br.com.eletrotechstore.pagamentos.model;
+package br.com.eletrotechstore.model;
 
-public enum Status {
+import java.io.Serializable;
+
+public enum Status implements Serializable {
   CRIADO,
   CONFIRMADO,
   CANCELADO

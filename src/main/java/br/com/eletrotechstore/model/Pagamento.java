@@ -1,23 +1,25 @@
-package br.com.eletrotechstore.pagamentos.model;
+package br.com.eletrotechstore.model;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Positive;
-import jakarta.validation.constraints.Size;
 import lombok.Data;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Positive;
+import javax.validation.constraints.Size;
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 @Entity
 @Table(name = "pagamentos")
 @Data
-public class Pagamento {
+public class Pagamento implements Serializable {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
   @Positive
+  @Column(name = "valor")
   private BigDecimal valor;
 
   @NotBlank
@@ -39,7 +41,9 @@ public class Pagamento {
   @Enumerated(EnumType.STRING)
   private Status status;
 
+  @Column(name = "pedido_id")
   private Long pedidoId;
 
+  @Column(name = "forma_de_pagamento_id")
   private Long formaDePagamentoId;
 }
