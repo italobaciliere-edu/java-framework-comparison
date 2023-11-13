@@ -1,0 +1,28 @@
+# global:
+#   scrape_interval: 30s
+#   scrape_timeout: 10s
+
+# rule_files:
+#   - alert.yml
+
+# scrape_configs:
+#   - job_name: services
+#     metrics_path: /metrics
+#     static_configs:
+#       - targets:
+#           - 'prometheus:9090'
+#           - 'idonotexists:564'
+
+global:
+  scrape_interval:     15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: 'docker'
+    static_configs:
+      - targets: ['docker.for.mac.localhost:9104']
+  - job_name: 'spring-monitoring'
+    scrape_interval: 5s
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['192.168.15.42:55827'] #Servidor da minha aplicação
